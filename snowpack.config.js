@@ -3,6 +3,7 @@ module.exports = {
     'src/_site': { url: '/', static: true },
     'src/scripts': { url: '/scripts' },
     'src/styles': { url: '/styles' },
+    'src/config': { url: '/config' },
   },
   plugins: [
     '@snowpack/plugin-postcss',

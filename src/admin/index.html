@@ -1,0 +1,8 @@
+{% layout 'layouts/cms.html' %}
+
+{% block content %}
+<script type="module" src="https://cdn.jsdelivr.net/npm/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+<script type="module" src="/scripts/cms-config.js"></script>
+
+<link href="/config/cms.yml" type="text/yaml" rel="cms-config-url">
+{% endblock %}
