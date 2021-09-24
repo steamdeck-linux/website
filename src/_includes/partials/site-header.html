@@ -1,42 +1,19 @@
-<header>
-  <nav class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center h-16">
-      <figure class="flex flex-shrink-0 items-center space-x-1">
-        <img
-          alt="11st starter-kit logo"
-          class="h-8 w-auto"
-          src="/images/11st-logo.svg"
-        />
-        <figcaption>Starter-Kit</figcaption>
-      </figure>
-      <ul class="flex space-x-4">
-        {% for item in navigation.items %}
-          {% if item.url == page.url %}
-            {% assign highlight = 'cursor-default' %}
-            {% assign current = 'aria-current="page"' %}
-          {% else %}
-            {% assign highlight = 'underline' %}
-            {% assign current = '' %}
-          {% endif %}
-          <li>
-            <a
-              href="{{ item.url }}"
-              class="text-base font-bold {{ highlight }}"
-              {{ current }}
-            >
-              {{ item.text }}
-            </a>
-          </li>
-        {% endfor %}
-        <li>
-          <a
-            href="https://github.com/stefanfrede/11st-starter-kit/"
-            class="text-base font-bold underline hover:text-green-900"
-          >
-            GitHub
-          </a>
-        </li>
-      </ul>
+<header class="sticky top-0 px-1 sm:px-6 lg:px-8 bg-gray-600 z-50">
+  <nav id="large-nav" class="relative flex items-center justify-center h-20 text-white">
+    <div id="nav-logo" class="hidden lg:flex absolute left-0 items-center">
+      <a href="/"><img width=64 height=64 src="https://res.cloudinary.com/moxvallix/image/upload/v1626781948/SteamDeck/steamdeck-logo_rpbpyz.svg" alt="SteamDeck Linux Logo"></a>
+      <a class="hover:text-gray-200 text-2xl" href="/"><strong>SteamDeck</strong> Linux</a>
     </div>
+    <div id="nav-links" class="flex items-center gap-2 sm:gap-4 font-bold">
+      <a class="hidden mob:flex items-center sd-hidden-lg flex-shrink-0" href="/"><img class="w-12 h-12" width=64 height=64 src="https://res.cloudinary.com/moxvallix/image/upload/v1626781948/SteamDeck/steamdeck-logo_rpbpyz.svg" alt="SteamDeck Linux Logo"><span class="hidden sm:block pr-4"><strong>SteamDeck</strong> Linux</span></a>
+      <a class="hover:text-gray-200" href="/about-steam-deck-linux">About</a>
+      <a target="_blank" class="hover:text-gray-200" href="https://steamdecklinux.wiki">Wiki</a>
+      <a target="_blank" class="hover:text-gray-200" href="https://reddit.com/r/steamdeck_linux">Reddit</a>
+      <a class="hover:text-gray-200" href="/frequently-asked-questions">FAQs</a>
+      <a class="lg:hidden hover:text-gray-200 px-4 py-2 border border-transparent rounded-md shadow-sm text-gray-600 font-bold hover:text-gray-200 active:text-gray-500 bg-white hover:bg-gray-800" href="/join">Join</a>
+    </div>
+    <div id="nav-extra" class="hidden lg:block absolute right-0">
+      <a class="px-4 py-2 border border-transparent rounded-md shadow-sm text-gray-600 font-bold hover:text-gray-200 active:text-gray-500 bg-white hover:bg-gray-800" href="/join">Join the Community</a>
+    </div> 
   </nav>
 </header>

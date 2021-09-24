@@ -1,0 +1,59 @@
+---
+title: 'Home'
+meta:
+  desc:
+    'SteamDeck Linux Community Homepage | A community to support SteamDeck Users to make the most
+    out of Linux'
+---
+{% layout "layouts/base.html" %}
+
+{% block content %}
+<section id="hero" class="w-full sd-bg-linux bg-bottom-left sm:bg-left hd:bg-center bg-fixed bg-no-repeat">
+  <div class="max-w-2xl py-16 sm:py-36 ml-5p mr-8 md:ml-10p lg:ml-15p text-white">
+    <h1 class="p-4 text-3xl sm:text-6xl bg-black bg-opacity-60">Welcome to the <strong>SteamDeck Linux</strong> Community!</h1>
+  </div>
+</section>
+<section id="info" class="flex flex-col items-center">
+  <div class="prose md:prose-lg m-4 mob:m-8 sm:m-12 text-gray-700">
+    <h2>We welcome all!</h2>
+    <p>SteamDeck Linux is a community dedicated to allowing users of the SteamDeck to get the most out of Linux. We believe that the SteamDeck 
+      has great potential, especially with it's Linux core, and our aim is to allow users of all experience levels to achieve that potential.
+    </p>
+    <p>
+      With our <a href="https://steamdecklinux.wiki/">Wiki</a>, acting as a centralised place for guides and information, and our 
+      <a href="https://reddit.com/r/steamdeck_linux">Subreddit</a> as a forum to help those in need, we aim to show new users how 
+      welcoming and helpful the Linux community can be!
+    </p>
+    <h2>We would love you to help out!</h2>
+    <p>Writing wiki articles is a lot of work. The more people we have contributing, the easier the job is as a whole. If you know a bit 
+      about Linux, Arch, KDE etc, and would be willing to spend some free time filling out the Wiki, or supporting users on Reddit, it would 
+      be greatly appreciated. Head on over to our <a href="/join">Join page</a>, to learn more.
+    </p>
+  </div>
+</section>
+<section id="updates" class="flex flex-col items-center">
+  <div class="flex flex-col gap-4 max-w-prose text-lg w-full m-4 mob:m-8 sm:m-12 text-black">
+    <h2 class="text-3xl font-bold">Have a look at our latest articles</h2>
+      {% for article in collections.all reversed %}
+        {% if article.data.type contains "article" %}
+          <p class="hidden">{% increment loop %}</p>
+          {% if loop <= 3 %}
+          <a class="no-underline" href="{{ article.url }}">
+            <div class="rounded bg-gray-200 p-4">
+              <h3 class="text-3xl font-bold">{{ article.data.title }}</h3>
+              {% if article.data.subtitle %}
+                <h4 class="text-xl font-bold">{{ article.data.subtitle }}</h4>
+              {% endif %}
+              <div class="flex justify-between items-center">
+                <p>By <strong>{{ article.data.author }}</strong></p>
+                <p>{{ article.data.date | date: "%b %d, %Y" }}</p>
+              </div>
+            </div>
+          </a>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+      <a class="underline text-black font-bold" href="/articles/">See more...</a>
+  </div>
+</section>
+{% endblock %}

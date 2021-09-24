@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+@media screen and (min-width: 1024px) {
+    .sd-hidden-lg {
+        display: none !important;
+    }
+  }
+  
+body {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.sd-bg-linux {
+    background-image: url(https://cdn.cloudflare.steamstatic.com/steamdeck/images/fauxrassic-park.jpg);
+}
+
+.no-underline {
+    text-decoration: none !important;
+}
+
+.article-card {
+    mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+}
