@@ -18,10 +18,24 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/cms/article.html"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/base-md.html"}
       - {label: "Type", name: "type", widget: "hidden", default: "article"}
       - {label: "Title", name: "title", widget: "string", pattern: ['^[\s\S]{1,110}$', 'Please keep your title to under 110 characters!']}
       - {label: "Subtitle", name: "subtitle", widget: "string", required: false, pattern: ['^[\s\S]{1,140}$', 'Please keep your title to under 140 characters!']}
       - {label: "Author", name: "author", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "pages" # Used in routes, e.g., /admin/collections/blog
+    label: "Pages" # Used in the UI
+    folder: "/src/pages" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/base-md.html"}
+      - {label: "Type", name: "type", widget: "hidden", default: "page"}
+      - {label: "Title", name: "title", widget: "string", pattern: ['^[\s\S]{1,110}$', 'Please keep your title to under 110 characters!']}
+      - {label: "Subtitle", name: "subtitle", widget: "string", required: false, pattern: ['^[\s\S]{1,140}$', 'Please keep your title to under 140 characters!']}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Page Slug", name: "url", widget: "string", pattern: ['^[a-z0-9]+(?:-[a-z0-9]+)*$', 'A slug can have no spaces or special characters']}
+      - {label: "Body", name: "body", widget: "markdown"}
+

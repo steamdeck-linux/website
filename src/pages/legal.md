@@ -11,7 +11,7 @@ Unless specified below, all media / content on this site is licensed under
 
 This website is licensed under the 
 <a target="_blank" href="https://www.gnu.org/licenses/gpl-3.0.txt">GNU GPLv3</a>. 
-You can view the source code <a target="_blank" href="">here</a>.
+You can view the source code <a target="_blank" href="https://github.com/steamdeck-linux/website">here</a>.
 
 Preview image of Linux running on the Steam Deck, used as the hero image on the Home page, 
 &copy; Valve Corporation.
