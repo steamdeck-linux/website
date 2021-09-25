@@ -1,10 +1,10 @@
 ---
-layout: 'layouts/base-md.html'
+layout: layouts/base-md.html
 type: article
-title: 'SteamDeck Linux Community Update #1'
-subtitle: Test
+title: "SteamDeck Linux Community Update #1"
+subtitle: ""
 author: Moxvallix
-date: 2021-09-24T11:09:41Z
+date: 2021-09-24T11:09:41.000Z
 ---
 A lot has happened since the Steam Deck was announced, and this community was started. We now have a:
 
