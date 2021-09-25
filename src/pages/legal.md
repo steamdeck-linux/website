@@ -1,16 +1,16 @@
 ---
-layout: 'layouts/base-md.html'
-title: 'Legal'
+layout: layouts/base-md.html
+title: Legal
 meta:
-  desc:
-    'Licenses and Legal for steamdecklinux.com'
-url: '/legal'
-permalink: '{{url}}/index.html'
+  desc: Licenses and Legal for steamdecklinux.com
+date: 2021-09-25T14:39:08.735Z
+url: /legal
+permalink: "{{url}}/index.html"
 ---
 Unless specified below, all media / content on this site is licensed under 
 <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>.
 
-This website is licensed under the 
+The source code for this website is licensed under the 
 <a target="_blank" href="https://www.gnu.org/licenses/gpl-3.0.txt">GNU GPLv3</a>. 
 You can view the source code <a target="_blank" href="https://github.com/steamdeck-linux/website">here</a>.
 
