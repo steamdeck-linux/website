@@ -4,7 +4,8 @@ title: 'Legal'
 meta:
   desc:
     'Licenses and Legal for steamdecklinux.com'
-permalink: '/legal/index.html'
+url: '/legal'
+permalink: '{{url}}/index.html'
 ---
 Unless specified below, all media / content on this site is licensed under 
 <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>.
