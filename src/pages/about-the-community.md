@@ -12,4 +12,6 @@ The Steam Deck Linux community was started as a way to welcome these new users c
 
 Our Reddit is a place where any new user can request help with using Linux on their Steam Deck. Our goal is to be as welcoming and supportive as possible to users getting their first taste of Linux.
 
-Our Wiki aims to document, in a beginner friendly manner, using Linux on the Steam Deck.
+Our Wiki aims to document, in a beginner friendly manner, using Linux on the Steam Deck. It aims to be a central hub of user submitted customisations, QOL hacks, guides to using desktop Linux, and any other useful tweaks.
+
+We hope that these resources our community provides will allow new users to experience Linux, and maybe even consider using it as their main driver, or at least convince them to experiment further and tinker.
