@@ -11,7 +11,7 @@ permalink: /{{url}}/index.html
 No, the SteamDeck Linux community is not affiliated with any of the organisations involved in the creation of the SteamDeck. We are a completely unofficial community. Links to official projects on the wiki's [Important Links](https://steamdecklinux.wiki/wiki/Important_Links) page.
 
 ### There is already the Arch Wiki, the KDE user guide, etc. Why are you making another?
-Firstly, the [Arch Wiki](https://wiki.archlinux.org/) is a wonderous resource to anyone getting in to Linux, and I highly advise you check it out if you are interested.  
+Firstly, the [Arch Wiki](https://wiki.archlinux.org/) is a wonderous resource for anyone getting in to Linux, and I highly advise you check it out if you are interested.  
 
 There are plenty of good beginner resources out there for new Linux users. The Linux community provides plenty of excellent support and documentation for those who seek it. However, much of this documentation can be spread far and wide across the internet, and sometimes a solution to a simple beginner problem can take hours of research. As well, when searching for a solution, the answer one may find may not be very beginner friendly.  
 
