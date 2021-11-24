@@ -1,0 +1,43 @@
+{% layout '../base.html' %}
+
+{% block content %}
+<section id="main-content" class="w-full flex flex-col items-center gap-4 p-4 sm:gap-12 sm:p-12 bg-df-yellow-light">
+    <h1 class="mob:text-3xl text-6xl font-bold">{{ title }}</h1>
+    {% for post in collections.all reversed %}
+        {% if post.data.type contains collects %}
+            <div id="{{ post.fileSlug }}" class="max-w-2xl w-full p-8 bg-bw-400 rounded cursor-pointer bg-gray-300" onclick="location.href='{{ post.url }}';">
+                <a href="{{ post.url }}" class="text-2xl font-bold">
+                    <h2>{{ post.data.title }}</h2>
+                </a>
+                {% if post.data.subtitle %}
+                    <h3 class="font-bold">{{ post.data.subtitle }}</h3>
+                {% endif %}
+                <div class="flex flex-row-reverse justify-between">
+                    <div class="text-right">
+                        {% if post.data.author %}
+                            <h3>By {{ post.data.author }}</h3>
+                        {% endif %}
+                        <h3>{{ post.data.date | date: "%b %d, %Y" }}</h3>
+                    </div>
+                    <div class="flex flex-wrap pt-2 gap-1 md:gap-2 self-end">
+                        {%- for slug in post.data.topics -%}
+                              <div class="">
+                                <a class="hover:text-gray-700 underline" href="/topics/{{ slug }}/">
+                                  {% assign topicname = slug | split: "-" %}
+                                    {% for topictitle in topicname %}
+                                      {{ topictitle | capitalize }}
+                                    {%- endfor -%}
+                                </a>
+                                {% assign lasttopic = post.data.topics | last %}
+                                  {% unless slug == lasttopic %}
+                                    <span>✧</span>
+                                  {% endunless %}
+                              </div>
+                        {%- endfor -%}
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+</section>
+{% endblock %}
